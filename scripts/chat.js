@@ -61,7 +61,7 @@ function getResponse() {
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
     $("textInput").val("");
-    $("#chatbox").append(userHtml);
+    $("#chat-box").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
     setTimeout(() => {
