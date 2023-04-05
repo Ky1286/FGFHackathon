@@ -52,5 +52,33 @@ function getHardResponse(userText) {
 }
 
 function getResponse() {
-    
+    let userText =  $("#textInput").val();
+
+    if (userText == "") {
+        window.alert("Please enter a valid message!");
+    }
+
+    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+    $("textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+    setTimeout(() => {
+        getHardResponse(userText);
+    }, 1000)
 }
+
+function sendButton() {
+    getResponse();
+}
+
+function heartButton() {
+    buttonSendText("Heart clicked!");
+}
+
+$("#textInput").keypress(function(e) {
+    if (e.which == 13) {
+        getResponse();
+    }
+});
