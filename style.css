@@ -15,18 +15,23 @@
 }
 
 .Chat-bar img{
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.chat{
+    max-height: 0;
+    overflow: hidden;
+}
+.container{
+    border: 10px solid red;
 }
 
 .Chat-bar{
-    justify-content: start;
-    padding: 15px;
-    align-items: center; 
-    display: table;
-    background-color: aqua;
-    
+    position: fixed;
+    bottom: 0;
+    right: 5%;
     
 }
 .bot-info{
