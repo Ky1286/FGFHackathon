@@ -52,14 +52,16 @@ function iqmsResponse() {
 }
 
 function harmonyResponse() {
-    
-    return "It sounds like you are looking for the Harmony page link: https://fgfbrands.service-now/sp";
+    var response = "It sounds like you are looking for the Harmony page link:";
+    return response + <a href= "https://fgfbrands.service-now/sp"> "https://fgfbrands.service-now/sp"</a>;
 }
 
 function xchangeResponse() {
-    return "It sounds like you are looking for the FGF XChange link: <a> https://fgfxchange.fgfbrands.com </a>";   
+    var response = "It sounds like you are looking for the FGF XChange link:";
+    return response + <a href= "https://fgfxchange.fgfbrands.com"> "https://fgfxchange.fgfbrands.com" </a>;   
 }
 
 function plpResponse() {
-    return "It sounds like you are looking for the PLP link: <a> https://pep.fgfbrands.com </a>";
+    var response = "It sounds like you are looking for the PLP link:";
+    return response + <a href= "https://pep.fgfbrands.com"> "https://pep.fgfbrands.com"</a>;
 }
