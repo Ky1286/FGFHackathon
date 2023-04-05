@@ -15,9 +15,9 @@ for (let i = 0; i < coll.length; i++) {
 }
 
 function getTime() {
-    let currentTime = new Date();
-    hours = currentTime.getHours();
-    mins = currentTime.getMinutes();
+    let today = new Date();
+    hours = today.getHours();
+    mins = today.getMinutes();
 
     if (hours < 10) {
         hours = "0" + hours;
