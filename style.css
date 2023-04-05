@@ -1,6 +1,6 @@
-*{
+/*{
     
-}
+} */
 
 
 .chatbot{
@@ -24,9 +24,34 @@
     align-items: center; 
     display: flex;
     background-color: aqua;
-    width:
     
 }
 .bot-info{
     padding-left: 10px;
+}
+
+.chat{
+    width: 100%;
+    padding: 0 15px;
+    color: white;
+    position: relative;
+    font-size: 0.9em;
+}
+
+.user{
+    width: 60%;
+    word-wrap: break-word;
+    background-color: green;
+    padding: 7px 10px;
+    border-radius: 10px 10px 10px 0;
+    margin: 10px 0;
+}
+
+.response{
+    width: 60%;
+    word-wrap: break-word;
+    background-color: green;
+    padding: 7px 10px;
+    border-radius: 10px 10px 10px 0;
+    margin: 5px 0 5px;
 }
