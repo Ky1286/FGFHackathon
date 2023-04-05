@@ -1,19 +1,5 @@
 *{
-
-    box-sizing: border-box;
-
-}
-
-body{
-
-    min-height: 100vh;
-
-}
-
-
-containter{
-    display: flex;
-    align-items: center;
+    
 }
 
 
@@ -40,19 +26,9 @@ containter{
     align-items: center; 
     display: table;
     background-color: aqua;
-    width:100%
-    
-    
-;
-
-
-    
+    width:
     
 }
 .bot-info{
     padding-left: 10px;
-}
-.chat{
-
-    
 }
