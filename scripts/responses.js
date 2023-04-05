@@ -15,6 +15,8 @@ function getBotResponse(input) {
             return "Hi there! How can I help you?";
         } else if (sentence[0].toUpperCase() === "GOODBYE") {
             return "Hope I helped!";
+        }else if (sentence[0].toUpperCase() === "IQMS" || sentence[0].toUpperCase() === "HARMONY" || sentence[0].toUpperCase() === "XCHANGE" || sentence[0].toUpperCase() === "PLP") {
+            return "Can you please be more specific in your inquiry?"
         } else {
             return "Could you please try asking something else?"
         }
