@@ -20,13 +20,13 @@
     padding: 10px;
 }
 
-.tChat-bar top{
+.Chat-bar{
     justify-content: start;
     padding: 15px;
     align-items: center; 
     display: table;
     background-color: aqua;
-    width:
+    
     
 }
 .bot-info{
