@@ -46,6 +46,7 @@ firstBotMessage();
 
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
+    //window.alert(botResponse); debug
     let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
     $("#chatbox").append(botHtml);
 
@@ -56,7 +57,7 @@ function getResponse() {
     let userText = $("#textInput").val();
 
     if (userText == "") {
-        userText = "I love Code Palace!";
+        userText = "I'm not sure what I need";
     }
 
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';

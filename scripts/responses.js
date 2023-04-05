@@ -1,6 +1,8 @@
 function getBotResponse(input) {
+    let clean = removePunctuation(input);
+    //window.alert(clean); debug
+    const sentence = clean.split(" ");
 
-    const sentence = input.split(" ");
 
     let iqmsC = 0;
     let harmonyC = 0;
@@ -8,9 +10,9 @@ function getBotResponse(input) {
     let plpC = 0;
 
     if (sentence.length == 1) {
-        if (input.toUpperCase() === "HELLO") {
+        if (sentence[0].toUpperCase() === "HELLO") {
             return "Hello there!";
-        } else if (input.toUpperCase() === "GOODBYE") {
+        } else if (sentence[0].toUpperCase() === "GOODBYE") {
             return "Hope I helped!";
         } else {
             return "Could you please try asking something else?"
@@ -21,47 +23,45 @@ function getBotResponse(input) {
                 iqmsC++;
             } else if (sentence[i].toUpperCase() === "HARMONY") {
                 harmonyC++;         
-            } else if (sentence[i].toUpperCase() === "XCHANGE") {
+            } else if (sentence[i].toUpperCase() === "XCHANGE" || sentence[i].toUpperCase() === "EXCHANGE") {
                 xchangeC++;
             } else if (sentence[i].toUpperCase() === "PLP") {
                 plpC++;
             }
         }
-        const confidence = [iqmsC, harmonyC, xchangeC, plpC];
-        let highest = 0;
-        for (var i = 0; i < 4; i++) {
-            if (confidence[i] > highest) {
-                highest = i;
-            }
-        }
-        if (highest == 0) {
+        if ((iqmsC > harmonyC) && (iqmsC > xchangeC) && (iqmsC > plpC)) {
             return iqmsResponse();
-        } else if (highest == 1) {
+        }
+        else if ((harmonyC > iqmsC) && (harmonyC > xchangeC) && (harmonyC > plpC)) {
             return harmonyResponse();
-        } else if (highest == 2) {
+        }
+        else if ((xchangeC > iqmsC) && (xchangeC > harmonyC) && (xchangeC > plpC)) {
             return xchangeResponse();
-        } else if (highest == 3) {
+        }
+        else if ((plpC > iqmsC) && (plpC > harmonyC) && (plpC > xchangeC)) {
             return plpResponse();
+        } else {
+            return "Could you please try asking something else?"
         }
     }
 }
 
+function removePunctuation(string) {
+    return string.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"");
+  }
+
 function iqmsResponse() {
-    var response = "It sounds like you are looking for the iQMS link:";
-    return response + <a href= "www.iqms.fgfbrands.com"> "https://iqms.fgfbrands.com" </a>;
+    return "It sounds like you are looking for the iQMS page link: https://iqms.fgfbrands.com";
 }
 
 function harmonyResponse() {
-    var response = "It sounds like you are looking for the Harmony page link:";
-    return response + <a href= "https://fgfbrands.service-now/sp"> "https://fgfbrands.service-now/sp"</a>;
+    return "It sounds like you are looking for the Harmony page link: https://fgfbrands.service-now/sp";
 }
 
 function xchangeResponse() {
-    var response = "It sounds like you are looking for the FGF XChange link:";
-    return response + <a href= "https://fgfxchange.fgfbrands.com"> "https://fgfxchange.fgfbrands.com" </a>;   
+    return "It sounds like you are looking for the FGF XChange link: https://fgfxchange.fgfbrands.com";   
 }
 
 function plpResponse() {
-    var response = "It sounds like you are looking for the PLP link:";
-    return response + <a href= "https://pep.fgfbrands.com"> "https://pep.fgfbrands.com"</a>;
+    return "It sounds like you are looking for the PLP link: https://pep.fgfbrands.com";
 }
