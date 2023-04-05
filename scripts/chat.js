@@ -88,9 +88,9 @@ function sendButton() {
     getResponse();
 }
 
-function heartButton() {
-    buttonSendText("Heart clicked!")
-}
+// function heartButton() {
+//     buttonSendText("Heart clicked!")             Future feedback tool
+// }
 
 $("#textInput").keypress(function (e) {
     if (e.which == 13) {
