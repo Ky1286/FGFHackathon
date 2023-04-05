@@ -4,7 +4,7 @@
     bottom: 0px;
 
 }
-.collapsiable{
+.collapsible{
     background-color: white;
     width: 300px;
 
@@ -20,11 +20,10 @@
     border-bottom: none;
 }
 
+
 .content{
     max-height: 0;
     overflow: hidden;
-
-
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
 
@@ -65,6 +64,17 @@ html{
     hyphens: auto;
 }
 
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
 
 
 @keyframes floatup {
