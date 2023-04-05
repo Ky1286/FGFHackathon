@@ -1,7 +1,7 @@
-var collapse = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsible");
 
-for (let i = 0; i < collapse.length; i++) {
-    collapse[i].addEventListener("click", function() {
+for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
 
         var content = this.nextElementSibling;
@@ -11,7 +11,7 @@ for (let i = 0; i < collapse.length; i++) {
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
         }
-    })
+    });
 }
 
 function getTime() {
