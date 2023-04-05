@@ -1,3 +1,25 @@
 .chat-bar-collapse{
-    
+    position: fixed;
+    right: 50px;
+    bottom: 0px;
+
+}
+.collapsiable{
+    background-color: white;
+    width: 300px;
+}
+
+.content{
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+html{
+    background-color: grey;
+}
+
+.full-chat-block{
+    max-width: 300px;
+    height: max-content;
 }
