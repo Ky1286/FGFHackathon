@@ -47,17 +47,19 @@ function getBotResponse(input) {
 }
 
 function iqmsResponse() {
-    return "It sounds like you are looking for the iQMS link: https://iqms.fgfbrands.com";
+    var response = "It sounds like you are looking for the iQMS link:";
+    return response + <a href= "www.iqms.fgfbrands.com"> "https://iqms.fgfbrands.com" </a>;
 }
 
 function harmonyResponse() {
+    
     return "It sounds like you are looking for the Harmony page link: https://fgfbrands.service-now/sp";
 }
 
 function xchangeResponse() {
-    return "It sounds like you are looking for the FGF XChange link: ";   
+    return "It sounds like you are looking for the FGF XChange link: <a> https://fgfxchange.fgfbrands.com </a>";   
 }
 
 function plpResponse() {
-    return "It sounds like you are looking for the PLP link: https://pep.fgfbrands.com";
+    return "It sounds like you are looking for the PLP link: <a> https://pep.fgfbrands.com </a>";
 }
