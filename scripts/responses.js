@@ -1,9 +1,48 @@
 function getBotResponse(input) {
-    if (input == "hello") {
-        return "Hello there!";
-    } else if (input == "goodbye") {
-        return "Hope I helped!";
+
+    const sentence = input.split(" ");
+
+    let iqmsC = 0;
+    let harmonyC = 0;
+    let xchangeC = 0;
+    let plpC = 0;
+
+    if (sentence.length == 1) {
+        if (input.toUpperCase() === "HELLO") {
+            return "Hello there!";
+        } else if (input.toUpperCase() === "GOODBYE") {
+            return "Hope I helped!";
+        } else {
+            return "Could you please try asking something else?"
+        }
     } else {
-        return "Could you please try asking something else?"
+        for (var i = 0; i < sentence.length; i++) {
+            if (sentence[i].toUpperCase() === "IQMS") {
+                iqmsC++;
+            } else if (sentence[i].toUpperCase() === "HARMONY") {
+                harmonyC++;         
+            } else if (sentence[i].toUpperCase() === "XCHANGE") {
+                xchangeC++;
+            } else if (sentence[i].toUpperCase() === "PLP") {
+                plpC++;
+            }
+        }
+
     }
+}
+
+function iqmsResponse() {
+
+}
+
+function harmonyResponse() {
+    
+}
+
+function xchangeResponse() {
+    
+}
+
+function plpResponse() {
+    
 }
