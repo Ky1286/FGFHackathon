@@ -16,15 +16,15 @@ for (let i = 0; i < coll.length; i++) {
 
 function getTime() {
     let currentTime = new Date();
-    hrs = currentTime.getHours();
+    hours = currentTime.getHours();
     mins = currentTime.getMinutes();
 
-    if (hrs < 10) {
-        hrs = "0" + hrs;
+    if (hours < 10) {
+        hours = "0" + hours;
     }
 
     if (mins < 10) {
-        minutes = "0" + mins;
+        mins = "0" + mins;
     }
 
     let time = hours + ":" + mins;
