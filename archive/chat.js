@@ -11,30 +11,29 @@ for (let i = 0; i < coll.length; i++) {
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
         }
-
     });
 }
 
 function getTime() {
     let today = new Date();
     hours = today.getHours();
-    minutes = today.getMinutes();
+    mins = today.getMinutes();
 
     if (hours < 10) {
         hours = "0" + hours;
     }
 
-    if (minutes < 10) {
-        minutes = "0" + minutes;
+    if (mins < 10) {
+        mins = "0" + mins;
     }
 
-    let time = hours + ":" + minutes;
+    let time = hours + ":" + mins;
     return time;
 }
 
 function firstBotMessage() {
-    let firstMessage = "How's it going?"
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    let firstMessage = "Hi there! My name is B1u3-b3rry. How can I help you today?"
+    document.getElementById("botStarterMessage").innerHTML = '<p class="boxText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
 
@@ -46,40 +45,27 @@ firstBotMessage();
 
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+    let botHtml = '<p class="boxText"><span>' + botResponse + '</span></p>';
     $("#chatbox").append(botHtml);
 
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
 function getResponse() {
-    let userText = $("#textInput").val();
+    let userText =  $("#textInput").val();
 
     if (userText == "") {
-        userText = "I love Code Palace!";
+        window.alert("Please enter a valid message!");
     }
 
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
+    $("textInput").val("");
+    $("#chat-box").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
     setTimeout(() => {
         getHardResponse(userText);
-    }, 1000)
-
-}
-
-function buttonSendText(sampleText) {
-    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
-
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
-
-    setTimeout(() => {
-        getHardResponse(sampleText);
     }, 1000)
 }
 
@@ -88,10 +74,10 @@ function sendButton() {
 }
 
 function heartButton() {
-    buttonSendText("Heart clicked!")
+    buttonSendText("Heart clicked!");
 }
 
-$("#textInput").keypress(function (e) {
+$("#textInput").keypress(function(e) {
     if (e.which == 13) {
         getResponse();
     }
