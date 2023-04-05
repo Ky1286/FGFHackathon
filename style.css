@@ -1,5 +1,19 @@
 *{
-    
+
+    box-sizing: border-box;
+
+}
+
+body{
+
+    min-height: 100vh;
+
+}
+
+
+containter{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -10,23 +24,35 @@
     border: 10px solid greenyellow;
     display: flex;
     background-color: grey;
+
+   
 }
 
-.top img{
+.Chat-bar img{
     width: 50px;
     height: 50px;
     padding: 10px;
 }
 
-.top{
+.tChat-bar top{
     justify-content: start;
     padding: 15px;
     align-items: center; 
-    display: flex;
+    display: table;
     background-color: aqua;
-    width:
+    width:100%
+    
+    
+;
+
+
+    
     
 }
 .bot-info{
     padding-left: 10px;
+}
+.chat{
+
+    
 }
