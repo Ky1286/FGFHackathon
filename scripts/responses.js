@@ -27,7 +27,13 @@ function getBotResponse(input) {
                 plpC++;
             }
         }
-
+        const confidence = [iqmsC, harmonyC, xchangeC, plpC];
+        let highest = 0;
+        for (var i = 0; i < 4; i++) {
+            if (confidence[i] > highest) {
+                highest = confidence[i];
+            }
+        }
     }
 }
 
