@@ -11,7 +11,7 @@ function getBotResponse(input) {
 
     if (sentence.length == 1) {
         if (sentence[0].toUpperCase() === "HELLO") {
-            return "Hello there!";
+            return "Hi there! How can I help you?";
         } else if (sentence[0].toUpperCase() === "GOODBYE") {
             return "Hope I helped!";
         } else {
@@ -41,7 +41,7 @@ function getBotResponse(input) {
         else if ((plpC > iqmsC) && (plpC > harmonyC) && (plpC > xchangeC)) {
             return plpResponse();
         } else {
-            return "Could you please try asking something else?"
+            return "I'm not sure what you're asking for. Could you please make an IT ticket?"
         }
     }
 }
