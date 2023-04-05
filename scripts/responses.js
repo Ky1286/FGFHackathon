@@ -2,7 +2,8 @@ function getBotResponse(input) {
     let clean = removePunctuation(input);
     //window.alert(clean); debug
     const sentence = clean.split(" ");
-
+    
+    let time = getTime();
 
     let iqmsC = 0;
     let harmonyC = 0;
@@ -17,6 +18,8 @@ function getBotResponse(input) {
         } else {
             return "Could you please try asking something else?"
         }
+    } else if ((input == "What is the time?") || (input == "What is the time right now?")) {
+        return "The time is " + time;
     } else {
         for (var i = 0; i < sentence.length; i++) {
             if (sentence[i].toUpperCase() === "IQMS") {
@@ -64,4 +67,21 @@ function xchangeResponse() {
 
 function plpResponse() {
     return "It sounds like you are looking for the PLP link: https://pep.fgfbrands.com";
+}
+
+function getTime() {
+    let today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
+
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    let time = hours + ":" + minutes;
+    return time;
 }
