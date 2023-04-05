@@ -37,5 +37,20 @@ function firstBotMessage() {
 
     let time = getTime();
 
-    $("")
+    $("#chat-timestamp").append(time);
+    document.getElementById("userInput").scrollIntoView(false);
+}
+
+firstBotMessage();
+
+function getHardResponse(userText) {
+    let botResponse = getBotResponse(userText);
+    let botHtml = '<p class="boxText"><span>' + botResponse + '</span></p>';
+    $("#chatbox").append(botHtml);
+
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+function getResponse() {
+    
 }
