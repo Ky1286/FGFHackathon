@@ -10,7 +10,7 @@ function getBotResponse(input) {
     let plpC = 0;
 
     if (sentence.length == 1) {
-        if (sentence[0].toUpperCase() === "HELLO") {
+        if (sentence[0].toUpperCase() === "HELLO" || sentence[0].toUpperCase() === "HI") {
             return "Hi there! How can I help you?";
         } else if (sentence[0].toUpperCase() === "GOODBYE") {
             return "Hope I helped!";
